@@ -4,7 +4,7 @@ import { Appbar } from "@repo/ui/appbar";
 
 export default function Page(): JSX.Element {
   const session = useSession();
-  console.log(session);
+  console.log(session.data?.user);
   return (
    <div>
       <Appbar onSignin={signIn} onSignout={signOut} user={session.data?.user} />
